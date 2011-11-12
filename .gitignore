@@ -1,7 +1,7 @@
-site_media/photologue/*
+public_html/site_media/photologue/*
 *.pyc
 custom_settings.py
-site_media/uploads/*
+public_html/site_media/uploads/*
 .pydevproject
 .project
 .settings
