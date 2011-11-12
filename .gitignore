@@ -5,3 +5,4 @@ site_media/uploads/*
 .pydevproject
 .project
 .settings
+django.wsgi

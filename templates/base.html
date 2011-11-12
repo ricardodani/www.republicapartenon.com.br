@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <title>{% block title %}República Partenon{% endblock %}</title>
        
-  <link href="{% url site_media 'css/estilo.css' %}" rel="stylesheet" type="text/css">
+  <link href="{{ MEDIA_URL }}css/estilo.css" rel="stylesheet" type="text/css">
   
   {% block extra_javascript %}
   {% endblock %}
@@ -21,7 +21,7 @@
   {% endif %}
 </head>
 <body>
-   <div id="top"><img src="{% url site_media 'img/logo.png'%}" /></div>
+   <div id="top"><img src="{{ MEDIA_URL }}img/logo.png" /></div>
    <div id="corpo">
    	 <span id="menu">
 		{% load tree_menu_tags %}	        
@@ -43,7 +43,7 @@
 		   <center>
 		   {% for b in banners %}
 		   <br /><br />
-		   <a target="_blank" href="{{ b.link }}" title="{{ b.titulo }}"><img border="0" src="{% url site_media b.arquivo %}" /></a>
+		   <a target="_blank" href="{{ b.link }}" title="{{ b.titulo }}"><img border="0" src="{{ MEDIA_URL }}{{ b.arquivo }}" /></a>
 		   
 		   {% endfor %}
 		   </center>

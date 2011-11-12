@@ -12,10 +12,10 @@ urlpatterns = patterns('',
   (r'^admin/(.*)', admin.site.root),
   (r'^tinymce/', include('tinymce.urls')),
   
-  url(r'^site_media/(?P<path>.*)$', 
-      'django.views.static.serve', {'document_root': settings.MEDIA_ROOT},
-       name='site_media'),
-  url(r'^admin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.ADMIN_MEDIA_ROOT, 'show_indexes':False}, name='admin_media'),
+  #url(r'^site_media/(?P<path>.*)$', 
+  #    'django.views.static.serve', {'document_root': settings.MEDIA_ROOT},
+  #     name='site_media'),
+  #url(r'^admin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.ADMIN_MEDIA_ROOT, 'show_indexes':False}, name='admin_media'),
        
   #conteudo
   url(r'^noticias/(?P<link>[\w_-]+)', 'noticias.views.noticia', name="noticia"),

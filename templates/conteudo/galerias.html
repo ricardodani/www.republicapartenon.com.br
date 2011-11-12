@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
   {% block extra_css %}
-  <link href="{% url site_media 'css/jquery.lightbox-0.5.css' %}" rel="stylesheet" type="text/css">
+  <link href="{{ MEDIA_URL }}css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css">
   {% endblock %}
   
   {% block extra_javascript %}
-  <script type="text/javascript" src="{% url site_media 'js/jquery.js' %}"></script>
-  <script type="text/javascript" src="{% url site_media 'js/jquery.lightbox-0.5.js' %}"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.lightbox-0.5.js"></script>
   <script type="text/javascript">
 	$(function() {
 
@@ -35,7 +35,7 @@
          
          {% for g in galerias %}
          <p class="galeria">
-         <strong class="azul"><img src="{% url site_media 'img/fotos.png' %}" />
+         <strong class="azul"><img src="{{ MEDIA_URL }}img/fotos.png" />
          &nbsp;<a href="{% url fotos g.id %}">{{ g.title }}</a></strong><br />
            <br />
          </p>
