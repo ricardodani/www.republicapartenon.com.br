@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pagina.titulo }}{% endblock%}
+
+
+{% block conteudo %}
+
+
+<h1>{{ noticia.titulo }}</h1>
+<p><img src="{% url site_media noticia.foto %}" alt="{{ noticia.titulo }}" class="center" />{{ noticia.html|safe }}</p>
+<i>Publicado em {{ noticia.data_publicacao|date }}</i>
+
+
+{% endblock %}

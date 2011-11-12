@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block conteudo %}
+<form method="POST" action="{% url contato %}" enctype="multipart/form-data" id="form">
+	{% if contato %}
+	<h1>{{ contato.titulo }}</h1>
+	{{ contato.corpo|safe }}
+	{% endif %}
+	<br />
+	<div id="">
+	{{ form.as_p }}
+	</div>
+	<input type="submit" />
+</form>
+{% endblock %}

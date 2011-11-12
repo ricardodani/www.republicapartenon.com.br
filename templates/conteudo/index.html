@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+  {% block extra_css %}
+  <link href="{% url site_media 'css/jquery.lightbox-0.5.css' %}" rel="stylesheet" type="text/css">
+  {% endblock %}
+  {% block extra_javascript %}
+  <script type="text/javascript" src="{% url site_media 'js/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% url site_media 'js/jquery.lightbox-0.5.js' %}"></script>
+  <script type="text/javascript">
+	$(function() {
+
+	    $('#fotos a.foto').lightBox(); // Select all links in object with gallery ID
+	});
+	</script>
+  {% endblock %}
+
+{% block conteudo %}
+
+	{% if destaque %}
+	<div class="destaque">
+	<h1>{{ destaque.titulo }}</h1>
+	
+	<span class="foto">
+		<img src="{% url site_media destaque.foto %}" />
+	</span>
+	<span class="descricao">
+		{{ destaque.html|safe }}
+		<a href="{% url noticia destaque.cod %}">Mais</a>
+	</span>
+	</div>
+	{% endif %}
+    <ul id="noticias">
+    	{% for i in noticias %}
+	   	<li><a href="{% url noticia i.cod %}">{{ i.titulo }}</a></li>
+	   	{% endfor %}
+   	</ul>
+   	<div id="fotos">
+   		<h1><img src="{% url site_media 'img/fotos.png' %}" /> Últimas fotos</h1>
+   		{% for foto in galeria %}
+   		<a class="foto" href="{{ foto.get_display_url }}"><img src="{{ foto.get_thumbnail_url }}" /></a>
+   		{% endfor %}<br />
+   		<a style="color:#990000;" href="{% url fotos %}">Ir para galeria</a>
+   	</div>
+   	<div id="video">
+   		<h1><img src="{% url site_media 'img/video.png' %}" /> Vídeo destaque</h1>
+   		<object width="325" height="264"><param name="movie" value="http://www.youtube.com/v/{{video.cod}}&amp;hl=pt_BR&amp;fs=1?rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/{{video.cod}}&amp;hl=pt_BR&amp;fs=1?rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="325" height="264"></embed></object>
+   	</div>
+{% endblock %}

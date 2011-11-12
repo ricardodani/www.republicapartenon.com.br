@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+
+{% block conteudo %}
+<h1>Como chegar?</h1>
+<iframe style="border: 1px solid #ddd;" width="570" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Benedito+Valadares,+166+-+Ouro+Preto+-+MG&amp;sll=-20.416717,-43.503113&amp;sspn=1.343624,2.469177&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Benedito+Valadares,+166+-+Ouro+Pr%C3%AAto+-+MG,+35400-000,+Brasil&amp;ll=-20.373676,-43.505602&amp;spn=0.010499,0.01929&amp;z=14&amp;iwloc=A&amp;iwstate1=dir&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Benedito+Valadares,+166+-+Ouro+Preto+-+MG&amp;sll=-20.416717,-43.503113&amp;sspn=1.343624,2.469177&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Benedito+Valadares,+166+-+Ouro+Pr%C3%AAto+-+MG,+35400-000,+Brasil&amp;ll=-20.373676,-43.505602&amp;spn=0.010499,0.01929&amp;z=14&amp;iwloc=A&amp;iwstate1=dir" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+{% endblock %}

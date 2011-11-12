@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block conteudo %}
+
+
+<h1>{{ categoria }}</h1>
+{% for m in moradores %}
+<div class="morador">
+	<img src="{% url site_media m.foto %}" />
+	<strong>{{ m.nome }}</strong><br />
+	{{ m.sobre }}<br />
+	<i>{{ m.cidade }}</i>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
