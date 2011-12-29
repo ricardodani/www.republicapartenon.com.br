@@ -39,7 +39,7 @@ class Morador(models.Model):
         super(Morador, self).save(*args, **kwargs)
     
         #redimensionando a imagem    
-        src_path = settings.RAIZ + self.foto.url
+        src_path = settings.PUBLIC_HTML + self.foto.url
         image = Image.open(src_path)
         src_width, src_height = image.size
         resize_ratio = min(1, min(float(tar_width) / float(src_width), float(tar_height) / float(src_height)))

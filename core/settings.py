@@ -3,7 +3,7 @@
 import os
 __path__ = os.path.dirname(__file__)
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ABSOLUTE_URL_PREFIX = '/'
@@ -33,6 +33,7 @@ USE_I18N = True
 #MEDIA_ROOT = os.path.join(__path__, 'site_media')
 #RAIZ = __path__
 
+PUBLIC_HTML = '/srv/www/partenon.com.br/public_html/'
 MEDIA_ROOT = '/srv/www/partenon.com.br/public_html/site_media/'
 
 MEDIA_URL = '/site_media/'
