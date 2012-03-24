@@ -53,8 +53,16 @@
 	 </div>
 	 <span class="site_bottom"></span>
 	 <center><address>	 
+	 {% if configs.rodape_do_site %}
+             {% if configs.rodape_do_site.1 %}
+                 {{ configs.rodape_do_site.0|safe }}
+             {% else %}
+                 {{ configs.rodape_do_site.0 }}
+             {% endif %}
+         {% else %}
 	 Associação República Partenon de Ouro Preto<br />
 	 Rua Donato da Fonseca, 02, Rosário :: Ouro Preto, MG :: (31) 3551-3005
+         {% endif %}
 	 </address></center>
    </div>
 <html>

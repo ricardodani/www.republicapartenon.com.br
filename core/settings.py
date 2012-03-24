@@ -9,7 +9,7 @@ TEMPLATE_DEBUG = DEBUG
 ABSOLUTE_URL_PREFIX = '/'
 
 ADMINS = (
-    # ('Ricardo Dani', 'ricardo.dani@gmail.com'),
+    ('Ricardo Dani', 'ricardo.dani@gmail.com'),
 )
 
 DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -79,6 +79,7 @@ INSTALLED_APPS = (
   'noticias',
   
   'teste',
+  'config',
 )
 
 TINYMCE_DEFAULT_CONFIG = {
@@ -143,6 +144,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   "django.core.context_processors.media",
   "django.core.context_processors.request",
   'context_processors.portal',
+  'config.context_processor.configuracoes',
   
 )
 
